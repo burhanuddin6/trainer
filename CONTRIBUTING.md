@@ -33,7 +33,7 @@ $ ln -sf ${GIT_TRAINING} $(go env GOPATH)/src/github.com/kubeflow/training-opera
 
 Install dependencies
 
-I had to go into the cloned repo in order to do this
+Change directory to project root and then:
 ```sh
 $ go mod tidy
 ```
@@ -79,7 +79,7 @@ NAME                 STATUS   ROLES           AGE   VERSION
 kind-control-plane   Ready    control-plane   32s   v1.27.3
 ```
 
-Note, that for the example job below, the PyTorchJob uses the `kubeflow` namespace.
+Note, that for the example job below, the TrainJob uses the `kubeflow-system` namespace.
 
 From here we can apply the manifests to the cluster.
 
